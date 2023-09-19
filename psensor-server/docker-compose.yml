@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  psensor-server:
+    build: .
+    ports:
+      - "7634:7634"
+      - "3131:3131"
+    volumes:
+      - "/sys/class/thermal:/sys/class/thermal:ro"
+
